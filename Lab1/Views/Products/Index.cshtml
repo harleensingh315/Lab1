@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Products</h2>
+
+<div>
+    <ul>
+        @foreach (var item in ViewBag.Allproducts)
+        {
+            string name = @item.productNames;
+            <li>@Html.ActionLink(name, "Details", "Products", new { value = name}, null)</li>
+            //<li>@item.productNames</li>
+        }
+    </ul>
+
+</div>
+
